@@ -224,23 +224,8 @@ void inputFile() {
     cout << "\033[2J\033[1;1H";
     cout << "[INPUT PEOPLE FROM FILE]" << endl << endl;
     cout << "Give the name of input file: ";
-    int exception;
-    while (true) {
-        try {
-            inputFile.open(getFileNameFromUser());
-            if (!inputFile.is_open()) throw exception = 1;
-            break;
-        }
-        catch (int exception) {
-            if (exception == 1) {
-                cout << "\033[2J\033[1;1H";
-                cout << "[INPUT PEOPLE FROM FILE]" << endl << endl;
-                cout << "Invalid input. Try Again: ";
-            }
-        }
-    }
 
-
+    inputFile.open(getFileNameFromUser());
 
     Person tempPerson;
     string tempLine;
